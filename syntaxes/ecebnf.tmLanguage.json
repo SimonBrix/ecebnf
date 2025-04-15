@@ -1,0 +1,148 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ECEBNF",
+	"patterns": [
+		{
+			"include": "#rule"
+		}
+	],
+	"repository": {
+		"rule": {
+			"name": "meta.rule.ecebnf",
+			"begin": "([a-zA-Z_][a-zA-Z0-9_]*)(\\s*)(::=)",
+			"beginCaptures": {
+				"1": {
+					"name": "entity.name.class.ecebnf"
+				},
+				"2": {
+					"name": "keyword.operator.whitespace.ecebnf"
+				},
+				"3": {
+					"name": "keyword.operator.definition.ecebnf"
+				}
+			},
+			"end": "$",
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			]
+		},
+		"expression": {
+			"patterns": [
+				{
+					"include": "#literals"
+				},
+				{
+					"include": "#match-symbol"
+				},
+				{
+					"include": "#char-range"
+				},
+				{
+					"include": "#identifier"
+				},
+				{
+					"include": "#paren-expression"
+				},
+				{
+					"include": "#alteration"
+				},
+				{
+					"include": "#comment"
+				}
+			]
+		},
+		"identifier": {
+			"patterns": [
+				{
+					"name": "variable.parameter.ecebnf",
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+				}
+			]
+		},
+		"paren-expression": {
+			"begin": "\\(",
+			"end": "\\)",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.paren.open.ecebnf"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.paren.close.ecebnf"
+				}
+			},
+			"name": "expression.group.ecebnf",
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			]
+		},
+		"literals": {
+			"patterns": [
+				{
+					"name": "string.quoted.single.ecebnf",
+					"match": "'(?:[a-zA-Z0-9 !#$%&,./:;<=>@^_`{}~\"]|\\\\[*+\\-?'\\()\\[\\]|\\\\ntr])*'"
+				}
+			]
+		},
+		"char-range": {
+			"begin": "\\[",
+			"end": "\\]",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.bracket.open.ecebnf"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.bracket.close.ecebnf"
+				}
+			},
+			"name": "meta.char-range.ecebnf",
+			"patterns": [
+				{
+					"name": "constant.character.ecebnf",
+					"match": "(?:(?:[a-zA-Z0-9 !#$%&,./:;<=>@^_`{}~\"]|\\\\[*+\\-?'\\()\\[\\]|\\\\ntr])(?:\\-(?:[a-zA-Z0-9 !#$%&,./:;<=>@^_`{}~\"]|\\\\[*+\\-?'\\()\\[\\]|\\\\ntr]))?)+"
+				}
+			]
+		},
+		"alteration": {
+			"name": "keyword.operator.alteration.ecebnf",
+			"match": "\\|"
+		},
+		"match-symbol": {
+			"patterns": [
+				{
+					"name": "keyword.operator.match.ecebnf",
+					"match": "(?<!\\s)[?+*]"
+				}
+			]
+		},
+		"comment": {
+			"begin": "/\\*",
+			"end": "\\*/",
+			"beginCaptures": {
+				"0": {
+					"name": "comment.block.ecebnf"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "comment.block.ecebnf"
+				}
+			},
+			"name": "comment.block.ecebnf",
+			"patterns": [
+				{
+					"name": "comment.block.ecebnf",
+					"match": "(?:\\*(?!/)|[a-zA-Z0-9 !#$%&,./:;<=>@^_`{}~\"+\\-?'\\()\\[\\]|\\\\ntr])"
+				}
+			]
+		}
+	},
+	"scopeName": "source.ecebnf"
+}
