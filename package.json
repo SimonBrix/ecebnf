@@ -10,16 +10,29 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "ecebnf",
-      "aliases": ["ECEBNF", "ecebnf"],
-      "extensions": [".ecebnf"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "ecebnf",
-      "scopeName": "source.ecebnf",
-      "path": "./syntaxes/ecebnf.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "ecebnf",
+        "aliases": [
+          "ECEBNF",
+          "ecebnf"
+        ],
+        "extensions": [
+          ".ecebnf"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ecebnf",
+        "scopeName": "source.ecebnf",
+        "path": "./syntaxes/ecebnf.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimonBrix/ecebnf"
   }
 }
