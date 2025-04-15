@@ -1,0 +1,30 @@
+{
+	"scopeName": "source.ecebnf.embedded",
+	"injectionSelector": "L:source.cpp",
+	"patterns": [
+		{
+			"name": "meta.embedded.ecebnf",
+			"begin": "R\"\\(",
+			"end": "(\\)\")(_ecebnf)",
+			"beginCaptures": {
+				"0": {
+					"name": "string.quoted.double.meta.ecebnf"
+				}
+			},
+			"endCaptures": {
+				"1": {
+					"name": "string.quoted.double.meta.ecebnf"
+				},
+				"2": {
+					"name": "keyword.operator.embedded.meta.ecebnf"
+				}
+			},
+			"contentName": "source.ecebnf",
+			"patterns": [
+				{
+					"include": "source.ecebnf"
+				}
+			]
+		}
+	]
+}

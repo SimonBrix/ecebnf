@@ -2,7 +2,7 @@
   "name": "ecebnf",
   "displayName": "ECEBNF",
   "description": "Syntax highlighting for ECEBNF",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -28,6 +28,13 @@
         "language": "ecebnf",
         "scopeName": "source.ecebnf",
         "path": "./syntaxes/ecebnf.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.ecebnf.embedded",
+        "path": "./syntaxes/ecebnf-embedded.tmLanguage.json",
+        "injectTo": [
+          "source.cpp"
+        ]
       }
     ]
   },

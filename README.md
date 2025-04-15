@@ -3,5 +3,5 @@
 
 ## Features
 
-Will do syntax highlighting for ECE BNF files (.ecebnf).
+Will do syntax highlighting for ECE BNF files (.ecebnf) and in C++ user defined string literals on the form R"(...)"_ecebnf.
 ![Example of syntax highlighting](example.png)

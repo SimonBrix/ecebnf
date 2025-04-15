@@ -2,8 +2,14 @@
 
 All notable changes to the "ecebnf" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
-## [Unreleased]
+## [0.1.0] - 2025-04-15
 
-- Initial release
+### Added
+- Syntax highlighting inside of R"(...)"_ecebnf strings in C++.
+
+## [0.0.1] - 2025-04-14
+
+### Added
+- Initial release of ECEBNF extension for Visual Studio Code.
