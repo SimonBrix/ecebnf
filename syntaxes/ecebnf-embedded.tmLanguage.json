@@ -4,16 +4,22 @@
 	"patterns": [
 		{
 			"name": "meta.embedded.ecebnf",
-			"begin": "R\"\\(",
-			"end": "(\\)\")(_ecebnf)",
+			"begin": "R\"(ecebnf)\\(",
 			"beginCaptures": {
 				"0": {
 					"name": "string.quoted.double.meta.ecebnf"
+				},
+				"1": {
+					"name": "constant.other.delimiter.begin.c++"
 				}
 			},
+			"end": "\\)(ecebnf)\"(.*)",
 			"endCaptures": {
-				"1": {
+				"0": {
 					"name": "string.quoted.double.meta.ecebnf"
+				},
+				"1": {
+					"name": "constant.other.delimiter.end.c++"
 				},
 				"2": {
 					"name": "keyword.operator.embedded.meta.ecebnf"

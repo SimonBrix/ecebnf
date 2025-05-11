@@ -2,13 +2,16 @@
   "name": "ecebnf",
   "displayName": "ECEBNF",
   "description": "Syntax highlighting for ECEBNF",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.99.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "publisher": "SimonBrix",
   "contributes": {
     "languages": [
       {

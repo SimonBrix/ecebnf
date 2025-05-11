@@ -4,6 +4,9 @@ All notable changes to the "ecebnf" extension will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
+## [0.1.1] - 2025-05-09
+- Changed the c++ string literal syntax to R"ecebnf(...)ecebnf"_xxxx.
+
 ## [0.1.0] - 2025-04-15
 
 ### Added
