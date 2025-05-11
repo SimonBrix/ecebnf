@@ -4,6 +4,10 @@ All notable changes to the "ecebnf" extension will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
+## [0.1.3] - 2025-05-11
+### Changed
+- Changed the end capture in C++ string literal to have a _ after the end of the string.
+
 ## [0.1.2] - 2025-05-11
 ### Changed
 - Changed the icon to use white background instead of transparent.
