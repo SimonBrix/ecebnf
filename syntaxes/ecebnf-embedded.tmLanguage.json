@@ -13,7 +13,7 @@
 					"name": "constant.other.delimiter.begin.c++"
 				}
 			},
-			"end": "\\)(ecebnf)\"(.*)",
+			"end": "\\)(ecebnf)\"(\\_.*)",
 			"endCaptures": {
 				"0": {
 					"name": "string.quoted.double.meta.ecebnf"
